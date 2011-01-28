@@ -1,8 +1,8 @@
 This is a fork of a rails template based on Rails template based on Mike Fischer's greendog-rails-template. It also incorporates work from PerfectLine's Template Bucket system. The goal of this fork is to fix bugs and extend the template so that it works better out-of-the-box.
 
-For more information:
-https://github.com/greendog99/greendog-rails-template  
-https://github.com/perfectline/template-bucket
+For more information:  
+<https://github.com/greendog99/greendog-rails-template>  
+<https://github.com/perfectline/template-bucket>
 
 ## Overview
 
@@ -36,14 +36,14 @@ quick set-up of my Rails applications.  The main features are:
 
 Get a copy of the template:
 
-`git clone git://github.com/greendog99/greendog-rails-template.git /tmp/greendog-rails-template`
+`git clone git://github.com/chanpory/greendog-rails-template.git /tmp/greendog-rails-template`
 
 Create a new Rails application as normal, specifying the path to the template script with the **-m** flag:
 
 `rails new appname -m /tmp/greendog-rails-template/template.rb`
 
 Start the rails server with `rails s` and browse
-to `http://localhost:9000/demos/text` and `http://localhost:9000/demos/grid`.
+to `http://localhost:3000/users.
 
 ## Documentation
 
