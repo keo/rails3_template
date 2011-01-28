@@ -4,13 +4,17 @@ puts "Creating Gemfile ...".magenta
 
 remove_file 'Gemfile'
 file 'Gemfile', <<-RUBY.gsub(/^ {2}/, '')
-  source 'http://gemcutter.org'
 
+  # Gems host
+  source 'http://rubygems.org'
+
+  # Rails (version >= 3.0.0 and < 3.1)
   gem 'rails', '~> 3.0.0'
-  gem 'mysql2'
-  gem 'capistrano'
+  
+  # Database
+  gem 'sqlite3-ruby', :require => 'sqlite3'
 
-  # HTML and CSS replacement
+  # HTML and CSS replacement, includes SASS
   gem 'haml', '~> 3.0'
   gem 'haml-rails'
 
@@ -19,7 +23,7 @@ file 'Gemfile', <<-RUBY.gsub(/^ {2}/, '')
   gem 'html5-boilerplate'
 
   # Human readable URLs
-  gem 'friendly_id', '~> 3.1'
+  gem 'friendly_id', '~> 3.2'
 
   # Validation of associations
   gem 'validates_existence', '~> 0.5'
@@ -27,35 +31,46 @@ file 'Gemfile', <<-RUBY.gsub(/^ {2}/, '')
   # Better console formatting
   gem 'hirb'
 
-  # User management
-  # gem 'devise', '~> 1.1'
-  #
+  # User authentication (Accounts)
+  gem 'devise', '~> 1.1'
+  
+  # User authorization (Permissions)
+  gem 'cancan', '~> 1.5.1'
+  
+  # Multiple views
+  gem 'themes_for_rails'
+
+  # File upload management
+  # NOTE: requires this fix to be applied: http://github.com/thoughtbot/paperclip/commit/56d6b2402d553a505f29eaeb022d4a6900fda8fa
+  gem 'paperclip', '~> 2.3'
+  
+  #Pagination of long lists
+  gem 'will_paginate', '~> 3.0.pre2'
+  
   # To convert Markdown to HTML
   # gem 'maruku'
-  #
-  # Pagination of long lists
-  # gem 'will_paginate', '~> 3.0.pre2'
   #
   # For Devise view generation
   # gem 'hpricot'
   # gem 'ruby_parser'
-  #
-  # File upload management
-  # NOTE: requires this fix to be applied: http://github.com/thoughtbot/paperclip/commit/56d6b2402d553a505f29eaeb022d4a6900fda8fa
-  # gem 'paperclip', '~> 2.3'
-  #
+  
   # To deal with file uploads via Flash uploader
   # gem 'mime-types'
-  #
+  
   # To track changes to pages and other objects
   # gem 'vestal_versions'
   #    -or-
   # gem 'paper_trail'
+   
+  # gem 'mysql2'
+  # gem 'capistrano'
+
+  # Useful Rails generator scripts for scaffolding, layout files, authentication, and more
+  gem "nifty-generators", :group => :development
 
   group :development, :test do
-    gem 'factory_girl_rails', '~> 1.0'
-    gem 'factory_girl_generator'
-    gem 'rspec-rails', '~> 2.1.0'
+    gem 'factory_girl'
+    gem 'rspec-rails', '~> 2.4'
     gem 'rcov'
     gem 'random_data'
   end
