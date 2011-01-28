@@ -56,7 +56,7 @@ apply "#{@partials}/_layouts.rb"       # Must be after boilerplate since it modi
 apply "#{@partials}/_helpers.rb"
 apply "#{@partials}/_appconfig.rb"
 apply "#{@partials}/_rspec.rb"
-apply "#{@partials}/_capistrano.rb"
+# apply "#{@partials}/_capistrano.rb"
 apply "#{@partials}/_application.rb"
 apply "#{@partials}/_friendly_id.rb"   # Must be after application.rb since it runs migrations
 apply "#{@partials}/_git.rb"           # Must be last in order to commit initial repository
