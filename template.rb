@@ -47,6 +47,7 @@ puts "\n========================================================="
 puts " RAILS 3 TEMPLATE".yellow.bold
 puts "=========================================================\n"
 
+apply "#{@partials}/_cleanup.rb"
 apply "#{@partials}/_gemfile.rb"
 apply "#{@partials}/_rvm.rb"           # Must be after gemfile since it runs bundler
 apply "#{@partials}/_boilerplate.rb"
@@ -60,6 +61,7 @@ apply "#{@partials}/_rspec.rb"
 apply "#{@partials}/_application.rb"
 # apply "#{@partials}/_friendly_id.rb"   # Must be after application.rb since it runs migrations
 apply "#{@partials}/_git.rb"           # Must be last in order to commit initial repository
+# apply "#{@partials}/_heroku.rb"
 # apply "#{@partials}/_demo.rb"
 
 puts "\n========================================================="
