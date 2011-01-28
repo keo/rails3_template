@@ -23,3 +23,6 @@ inject_into_file 'config/application.rb', :before => "  end\nend" do
     config.logger = Logger.new(config.paths.log.first, 50, 1048576)
   RUBY
 end
+
+run "rails g scaffold User name:string"
+run "rake db:migrate"
