@@ -4,7 +4,15 @@ puts "Initializing new Git repo ...".magenta
 
 remove_file '.gitignore'
 file '.gitignore', <<-CODE.gsub(/^ {2}/, '')
+
+  # ignore unneeded OS, backup and tempfiles
+
+  *~
   .DS_Store
+  Thumbs.db
+  *.tmp
+  tmp.pot
+  .lastdeploy
   .bundle
   mkmf.log
 
@@ -33,6 +41,24 @@ file '.gitignore', <<-CODE.gsub(/^ {2}/, '')
   doc/api
   log/*.log
   tmp/**/*
+
+  # ignore Textmate, Komodo, cscope, Eclipse, RubyMine and Quanta Plus files
+
+  nbproject
+  projfiles
+  .classpath
+  .project
+  .settings
+  .buildpath
+  .idea
+  *.kpf
+  *.launch
+  *.tmproj
+  *.session
+  *.webprj
+  cscope.out
+  tm_cscope.files
+  tags
 CODE
 
 git :init
