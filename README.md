@@ -1,7 +1,8 @@
-This is a fork of a rails template based on Rails template based on Mike Fischer's greendog-rails-template. It also incorporates work from PerfectLine's Template Bucket system. The goal of this fork is to fix bugs and extend the template so that it works better out-of-the-box.
+This is a fork of a fork of a rails template based on Rails template based on Mike Fischer's greendog-rails-template. :) It also incorporates work from PerfectLine's Template Bucket system. The goal of this fork is to fix bugs and extend the template so that it works better out-of-the-box.
 
-For more information:  
-<https://github.com/greendog99/greendog-rails-template>  
+For more information:
+<https://github.com/keo/rails3-template>
+<https://github.com/greendog99/greendog-rails-template>
 <https://github.com/perfectline/template-bucket>
 
 ## Overview
@@ -19,9 +20,8 @@ quick set-up of my Rails applications.  The main features are:
 * Removes everything to do with Prototype, since the Boilerplate is based on [JQuery](http://jquery.com/).
 * Removes unneeded files like the default Rails index.html and image.
 * Adds a Gemfile with commonly needed gems, and some some optional gems available to un-comment when needed.
-* Creates a custom RVM gemset for the application, and installs all Gems via bundler.
 * Uses RSpec and factory_girl instead of test-unit.
-* Implements automatic log rotation for server logs, based on log size.
+* Adds Capybara and Akephalos for integration testing
 * Adds a config/app_config.yml file and corresponding initializer, to facilitate app-specific config settings.
 * Disables timestamped_migrations to make the filenames more usable in TextMate.
 * Sets up a Git repository complete with gitignore list, and commits the entire project.
@@ -36,11 +36,11 @@ quick set-up of my Rails applications.  The main features are:
 
 Get a copy of the template:
 
-`git clone git://github.com/chanpory/greendog-rails-template.git /tmp/greendog-rails-template`
+`git clone git://github.com/keo/rails3-template.git /tmp/rails3-template`
 
 Create a new Rails application as normal, specifying the path to the template script with the **-m** flag:
 
-`rails new appname -m /tmp/greendog-rails-template/template.rb`
+`rails new appname -m /tmp/rails3-template/template.rb`
 
 Start the rails server with `rails s` and browse
 to `http://localhost:3000/users.
@@ -51,7 +51,6 @@ This section will explain how to use each of the features.
 
 ## To Do
 
-* Add capistrano deploy.rb file.
 * Optionally (based on user interrogation) set up features like devise, paperclip, etc.
 
 ## See Also
@@ -62,6 +61,7 @@ This section will explain how to use each of the features.
 
 Thanks to others whose work has steered me in the right direction:
 
+* <https://github.com/greendog99/greendog-rails-template>
 * <https://github.com/shawn/shawns-rails3-template/>
 * <https://github.com/sporkd/compass-html5-boilerplate>
 * <http://html5boilerplate.com/>
