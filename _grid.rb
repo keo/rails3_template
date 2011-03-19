@@ -11,7 +11,7 @@ inject_into_file 'app/stylesheets/style.sass', :after => "//@import \"partials/o
 end
 
 file 'app/stylesheets/partials/_grid.sass', <<-SASS.gsub(/^ {2}/, '')
-  /* From http://www.1kbgrid.com/
+  // From http://www.1kbgrid.com/
 
   $columns: 12
   $col_width: 60px
