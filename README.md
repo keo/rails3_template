@@ -43,7 +43,7 @@ Create a new Rails application as normal, specifying the path to the template sc
 `rails new appname -m /tmp/rails3-template/template.rb`
 
 Start the rails server with `rails s` and browse
-to `http://localhost:3000/users.
+to `http://localhost:3000/demos/text.
 
 ## Documentation
 
