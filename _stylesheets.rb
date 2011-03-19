@@ -158,7 +158,7 @@ file 'app/stylesheets/partials/_buttons.sass', <<-SASS.gsub(/^ {2}/, '')
       font-size: 11px
       padding: .2em 1em .275em
 
-    /* gray
+    // gray
 
     .neutral
       color: #e9e9e9
@@ -178,7 +178,7 @@ file 'app/stylesheets/partials/_buttons.sass', <<-SASS.gsub(/^ {2}/, '')
         background: -moz-linear-gradient(top, #575757, #888888)
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#575757', endColorstr='#888888')
 
-    /* white
+    // white
 
     .white
       color: #606060
@@ -198,7 +198,7 @@ file 'app/stylesheets/partials/_buttons.sass', <<-SASS.gsub(/^ {2}/, '')
         background: -moz-linear-gradient(top, #ededed, white)
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff')
 
-    /* blue
+    // blue
 
     .normal
       color: #d9eef7
@@ -218,7 +218,7 @@ file 'app/stylesheets/partials/_buttons.sass', <<-SASS.gsub(/^ {2}/, '')
         background: -moz-linear-gradient(top, #0078a5, #00adee)
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee')
 
-    /* rosy
+    // rosy
 
     .warning
       color: #fae7e9
@@ -238,7 +238,7 @@ file 'app/stylesheets/partials/_buttons.sass', <<-SASS.gsub(/^ {2}/, '')
         background: -moz-linear-gradient(top, #bf404f, #f16c7c)
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bf404f', endColorstr='#f16c7c')
 
-    /* green
+    // green
 
     .positive
       color: #e8f0de
