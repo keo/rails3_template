@@ -2,11 +2,11 @@
 
 puts "Creating CSS grid framework ...".magenta
 
-inject_into_file 'app/stylesheets/style.sass', :after => "@import \"partials/example\";\n\n" do
+inject_into_file 'app/stylesheets/style.sass', :after => "//@import \"partials/overrides\";\n" do
   <<-SASS.gsub(/^ {4}/, '')
+
     // Import the custom grid layout
     @import partials/grid
-
   SASS
 end
 
